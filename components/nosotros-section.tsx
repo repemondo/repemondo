@@ -16,8 +16,8 @@ const features = [
     color: "bg-primary",
     textColor: "text-white",
     icon: "/images/focused-excellence.png",
-    selectorSize: "scale-[1.15]", // Ajuste específico para esta imagen
-    containerSize: "scale-[1.15]", // Ajuste específico para esta imagen
+    selectorSize: "scale-[1.5]",
+    containerSize: "scale-[1.4]",
   },
   {
     id: "agile",
@@ -30,8 +30,8 @@ const features = [
     color: "bg-[#8B7FD7]",
     textColor: "text-white",
     icon: "/images/agile-mindset.png",
-    selectorSize: "", // Esta es la referencia, no necesita ajuste
-    containerSize: "", // Esta es la referencia, no necesita ajuste
+    selectorSize: "scale-[1.4]",
+    containerSize: "scale-[1.3]",
   },
   {
     id: "collab",
@@ -44,8 +44,8 @@ const features = [
     color: "bg-[#4CAF8F]",
     textColor: "text-white",
     icon: "/images/power-of-collab.png",
-    selectorSize: "scale-[1.2]", // Ajuste específico para esta imagen
-    containerSize: "scale-[1.2]", // Ajuste específico para esta imagen
+    selectorSize: "scale-[1.6]",
+    containerSize: "scale-[1.5]",
   },
   {
     id: "shark",
@@ -58,8 +58,8 @@ const features = [
     color: "bg-[#f7c45a]",
     textColor: "text-black",
     icon: "/images/shark-tank.png",
-    selectorSize: "scale-[1.25]", // Ajuste específico para esta imagen
-    containerSize: "scale-[1.25]", // Ajuste específico para esta imagen
+    selectorSize: "scale-[1.7]",
+    containerSize: "scale-[1.6]",
   },
 ]
 
@@ -129,7 +129,7 @@ export function NosotrosSection() {
                   <h3 className={cn("text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4", feature.textColor)}>
                     {feature.title}
                   </h3>
-                  <h4 className={cn("text-lg md:text-xl font-medium mb-4 md:mb-6", feature.textColor)}>
+                  <h4 className={cn("text-xl md:text-2xl font-caveat mb-4 md:mb-6", feature.textColor)}>
                     {feature.subtitle}
                   </h4>
                   <div className="space-y-3 md:space-y-4">
@@ -149,7 +149,7 @@ export function NosotrosSection() {
                 <div className="order-1 md:order-2 flex justify-center relative mb-6 md:mb-0">
                   <div
                     className={cn(
-                      "w-36 h-36 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full flex items-center justify-center overflow-visible",
+                      "w-40 h-40 md:w-56 md:h-56 lg:w-72 lg:h-72 rounded-full flex items-center justify-center overflow-visible",
                       feature.id === "shark" ? "bg-black/10" : "bg-white/10",
                     )}
                   >
@@ -158,7 +158,7 @@ export function NosotrosSection() {
                       alt={feature.title}
                       width={160}
                       height={160}
-                      className={`w-32 h-32 md:w-65 md:h-65 lg:w-78 lg:h-78 object-contain transform ${feature.containerSize}`}
+                      className={`w-28 h-28 md:w-44 md:h-44 lg:w-56 lg:h-56 object-contain transform ${feature.containerSize}`}
                     />
                   </div>
                 </div>
