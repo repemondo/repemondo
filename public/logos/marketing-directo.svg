@@ -1,0 +1,12 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 20H110" stroke="white" stroke-width="2"/>
+  <path d="M15 10L25 30" stroke="white" stroke-width="2"/>
+  <path d="M35 10L25 30" stroke="white" stroke-width="2"/>
+  <path d="M40 10H50V30H40V10Z" stroke="white" stroke-width="2"/>
+  <path d="M60 10C60 10 70 10 70 20C70 30 60 30 60 30H55V10H60Z" stroke="white" stroke-width="2"/>
+  <path d="M80 10V30" stroke="white" stroke-width="2"/>
+  <path d="M90 10V30" stroke="white" stroke-width="2"/>
+  <path d="M80 20H90" stroke="white" stroke-width="2"/>
+  <path d="M100 10V30L110 20L100 10Z" stroke="white" stroke-width="2"/>
+  <text x="60" y="35" text-anchor="middle" font-size="8" fill="white">MARKETING DIRECTO</text>
+</svg>

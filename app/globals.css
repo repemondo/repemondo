@@ -1,0 +1,353 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+    --background: 0 80% 10%; /* Esto corresponde a #220909 */
+    --foreground: 0 0% 100%;
+    --card: 0 80% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 80% 10%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 59% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 100% 75%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 80% 15%;
+    --muted-foreground: 0 0% 80%;
+    --accent: 45 100% 75%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 0 59% 51%;
+    --radius: 0.5rem;
+    cursor: url("/custom-cursor.svg") 25 25, auto;
+  }
+
+  .startups-theme {
+    --background: 250 64% 12%;
+    --foreground: 0 0% 100%;
+    --card: 250 64% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 250 64% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 267 100% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 100% 75%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 250 64% 15%;
+    --muted-foreground: 0 0% 80%;
+    --accent: 156 100% 45%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 267 100% 67%;
+  }
+}
+
+/* Importar estilos específicos */
+@import "./styles/vernon-creative.css";
+@import "./styles/vernon-plus.css";
+
+/* Custom cursor */
+html,
+body {
+  cursor: url("/custom-cursor.svg") 25 25, auto;
+}
+
+/* Navbar link underline effect */
+.nav-link-underline {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #fc6059;
+  transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover::after {
+  width: 100%;
+}
+
+/* Star trail effect */
+.star-trail {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 6px; /* Reduced from 10px */
+  height: 6px; /* Reduced from 10px */
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+  animation: star-fade 1.2s ease-out forwards; /* Slightly faster animation */
+}
+
+@keyframes star-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  20% {
+    opacity: 0.7; /* Reduced from 1 for subtlety */
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
+
+.star-trail::before {
+  content: "★";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f7c45a;
+  font-size: 6px; /* Reduced from 10px */
+}
+
+/* Estilo para estrellas que siguen el cursor */
+.cursor-follow {
+  transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.starry-bg {
+  background-color: #220909;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 2px),
+    radial-gradient(circle at 75% 44%, rgba(255, 255, 255, 0.05) 0%, transparent 2px),
+    radial-gradient(circle at 46% 52%, rgba(255, 255, 255, 0.05) 0%, transparent 1px),
+    radial-gradient(circle at 35% 69%, rgba(255, 255, 255, 0.05) 0%, transparent 2px),
+    radial-gradient(circle at 80% 85%, rgba(255, 255, 255, 0.05) 0%, transparent 1px);
+}
+
+.wavy-divider {
+  position: relative;
+  height: 48px;
+  background: linear-gradient(180deg, transparent 0%, var(--accent) 100%);
+}
+
+.wavy-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background: radial-gradient(circle at 50% 100%, transparent 12px, var(--accent) 13px) 50% 0 / 26px 100%,
+    radial-gradient(circle at 50% 0, var(--accent) 12px, transparent 13px) 50% 100% / 26px 100%;
+  background-repeat: repeat-x;
+  animation: wave 3s linear infinite;
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 26px;
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-link {
+  @apply text-sm font-medium text-white/80 hover:text-white transition-colors;
+}
+
+.nav-link.active {
+  @apply text-white;
+}
+
+.service-button {
+  @apply px-6 py-3 bg-secondary text-secondary-foreground rounded-full font-medium 
+transition-all hover:scale-105 hover:shadow-lg shadow-black/25;
+}
+
+.service-list {
+  @apply space-y-2 text-white/80;
+}
+
+.service-list li {
+  @apply flex items-center gap-2;
+}
+
+.service-list li::before {
+  content: "→";
+  @apply text-accent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.scroll-indicator {
+  animation: bounce 2s infinite;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 0.7;
+}
+
+/* Clase para el título del header con la fuente Poppins */
+.header-title {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Clase para la fuente de escritura a mano */
+.font-caveat {
+  font-family: var(--font-caveat);
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+/* Clase para la fuente Playfair Display para titulares destacados */
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+/* Estilos específicos para los titulares principales */
+.headline-hero {
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.headline-section {
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.headline-accent {
+  font-family: var(--font-playfair);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Mejoras para el menú móvil */
+@media (max-width: 768px) {
+  /* Prevenir el scroll cuando el menú está abierto */
+  body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Efecto de pulsación para botones en móvil */
+  button:active {
+    transform: scale(0.97);
+  }
+}
+
+/* Mejorar la accesibilidad de los botones del menú */
+.mobile-menu-button {
+  position: relative;
+  outline: none;
+  color: white;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.mobile-menu-button:hover {
+  color: #f7c45a;
+}
+
+.mobile-menu-button:focus-visible {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: #f7c45a;
+  --tw-ring-offset-width: 2px;
+  --tw-ring-offset-color: #220909;
+}

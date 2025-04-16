@@ -1,0 +1,7 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 10H40V15H25V17.5H35V22.5H25V25H40V30H20V10Z" fill="white"/>
+  <path d="M45 10H50V20C50 20 50 25 55 25C60 25 60 20 60 20V10H65V20C65 20 65 30 55 30C45 30 45 20 45 20V10Z" fill="white"/>
+  <path d="M70 10H75V15H85V10H90V30H85V20H75V30H70V10Z" fill="white"/>
+  <path d="M95 10H115V15H105V17.5H110V22.5H105V30H95V10Z" fill="white"/>
+  <text x="60" y="35" text-anchor="middle" font-size="6" fill="white">FORBES</text>
+</svg>

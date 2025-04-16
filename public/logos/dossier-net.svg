@@ -1,0 +1,13 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 10H30C30 10 40 10 40 20C40 30 30 30 30 30H20V10Z" stroke="white" stroke-width="2"/>
+  <path d="M50 10C50 10 60 10 60 20C60 30 50 30 50 30C50 30 40 30 40 20C40 10 50 10 50 10Z" stroke="white" stroke-width="2"/>
+  <path d="M70 10V30" stroke="white" stroke-width="2"/>
+  <path d="M70 10H80" stroke="white" stroke-width="2"/>
+  <path d="M70 20H80" stroke="white" stroke-width="2"/>
+  <path d="M70 30H80" stroke="white" stroke-width="2"/>
+  <path d="M90 10V30" stroke="white" stroke-width="2"/>
+  <path d="M90 10H100" stroke="white" stroke-width="2"/>
+  <path d="M90 20H100" stroke="white" stroke-width="2"/>
+  <path d="M90 30H100" stroke="white" stroke-width="2"/>
+  <text x="60" y="35" text-anchor="middle" font-size="8" fill="white">DOSSIER NET</text>
+</svg>
