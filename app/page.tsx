@@ -616,9 +616,15 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 headline-section">
               Construimos en conjunto.
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Cuáles son algunas de las marcas que han confiado y confían en Vernon Creative Bureau
-            </p>
+            <div className="text-xl text-white/80 max-w-3xl mx-auto">
+              <p className="hidden md:block">
+                Cuáles son algunas de las marcas que han confiado
+                <br />y confían en Vernon Creative Bureau.
+              </p>
+              <p className="block md:hidden">
+                Cuáles son algunas de las marcas que han confiado y confían en Vernon Creative Bureau.
+              </p>
+            </div>
           </div>
 
           {/* Grid de logos ordenados alfabéticamente */}
