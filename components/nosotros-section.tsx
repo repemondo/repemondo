@@ -73,7 +73,7 @@ export function NosotrosSection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 headline-section">Nuestra experiencia</h2>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 headline-section">es tu ventaja.</h2>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Conoce los pilares que nos definen y nos hacen únicos en el mercado
+            Conocé los pilares que nos definen y nos diferencian en el mercado.
           </p>
         </div>
 

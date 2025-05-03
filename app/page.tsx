@@ -613,7 +613,9 @@ export default function Home() {
         <div className="container max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 headline-section">Creyeron en nosotros.</h2>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 headline-section">Creamos con ellos.</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 headline-section">
+              Construimos en conjunto.
+            </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Cuáles son algunas de las marcas que han confiado y confían en Vernon Creative Bureau
             </p>
@@ -796,9 +798,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[#f7c45a] headline-accent">
               ABRAKADABRA!
             </h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Momentos en la prensa que nos llenan de orgullo :)
-            </p>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">Vernon en los medios.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
