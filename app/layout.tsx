@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Poppins, Caveat, Playfair_Display } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { StarTrailCursor } from "@/components/star-trail-cursor"
@@ -55,6 +56,16 @@ export default function RootLayout({
           {children}
         </AudioContextProvider>
       </body>
+      {/* Google Analytics */}
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-EB9YWTS6ZT" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EB9YWTS6ZT');
+        `}
+      </Script>
     </html>
   )
 }
